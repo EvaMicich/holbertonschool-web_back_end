@@ -56,7 +56,7 @@ class Server:
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """
-        returns a dictionary containing page_size, page, data, next_page, 
+        returns a dictionary containing page_size, page, data, next_page,
         prev_page, total_pages
         """
         data_list = self.dataset()
@@ -77,4 +77,3 @@ class Server:
             "total_pages": total_page
         }
         return page_dict
-    
