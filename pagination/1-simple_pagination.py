@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-takes two integer arguments page with default value 1 and page_size with default value 10.
+takes two integer arguments page with default value 1 and
+page_size with default value 10.
 """
 import csv
 import math
@@ -37,10 +38,10 @@ class Server:
 
         return self.__dataset
 
-    
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
-        return the appropriate page of the dataset (i.e. the correct list of rows)
+        return the appropriate page of the dataset
+        (i.e. the correct list of rows)
         """
         assert type(page) == int
         assert type(page_size) == int
