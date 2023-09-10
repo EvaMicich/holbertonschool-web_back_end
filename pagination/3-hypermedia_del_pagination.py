@@ -41,18 +41,19 @@ class Server:
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """return dictionary"""
-        assert 0 <+ index < len(self.__indexed_dataset)
+        assert 0 <= index < len(self.__indexed_dataset)
         data = []
         next_index = index
         while len(data) < page_size and next_index in self.__indexed_dataset:
             data.append(self.__indexed_dataset[next_index])
             next_index += 1
-        next_index = next_index if next_index in self.__indexed_dataset else None
+        if next_index in self.__indexed_dataset:
+            next_index = next_index
+        else:
+            next_index = None
         return {
             'index': index,
             'data': data,
             'page_size': page_size,
             'next_index': next_index
             }
-
-        
