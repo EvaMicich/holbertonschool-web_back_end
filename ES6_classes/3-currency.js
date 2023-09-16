@@ -3,12 +3,12 @@ export default class Currency {
     this._code = code;
     this._name = name;
   }
-  
+
   // Getter for code
   get code() {
     return this._code;
   }
-  
+
   // Setter for code
   set code(newCode) {
     if (typeof newCode !== 'string') {
@@ -16,12 +16,12 @@ export default class Currency {
     }
     this._code = newCode;
   }
-  
+
   // Getter for name
   get name() {
     return this._name;
   }
-  
+
   // Setter for name
   set name(newName) {
     if (typeof newName !== 'string') {
@@ -29,7 +29,7 @@ export default class Currency {
     }
     this._name = newName;
   }
-  
+
   displayFullCurrency() {
     return `${this._name} (${this._code})`;
   }
